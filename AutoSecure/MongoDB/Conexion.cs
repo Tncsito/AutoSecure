@@ -14,8 +14,8 @@ namespace AutoSecure.MongoDB
 
         public MongoDBService()
         {
-            var client = new MongoClient("mongodb+srv://dye:tero@control.nmu0r.mongodb.net/");
-            var database = client.GetDatabase("authDB");
+            var client = new MongoClient("mongodb+srv://dye:tero@control.nmu0r.mongodb.net/?retryWrites=true&w=majority&appName=Control");
+            var database = client.GetDatabase("Sistema");
             _usersCollection = database.GetCollection<BsonDocument>("usuarios");
         }
 
