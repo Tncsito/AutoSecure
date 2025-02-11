@@ -7,7 +7,7 @@ public partial class RegisterPage : ContentPage
 	public RegisterPage()
 	{
 		InitializeComponent();
-        BindingContext = new RegisterViewModel();
+        //BindingContext = new RegisterViewModel();
     }
     private async void OnLoginClicked(object sender, EventArgs e)
     {

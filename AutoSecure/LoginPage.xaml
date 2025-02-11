@@ -2,15 +2,25 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AutoSecure.LoginPage"
-             Title="LoginPage">
-    <VerticalStackLayout Padding="20" Spacing="15">
-        <Label Text="Iniciar Sesión" FontSize="24" FontAttributes="Bold" HorizontalOptions="Center" />
+             Title="LoginPage" 
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#333333">
+    <VerticalStackLayout Spacing="25" Padding="30,-15,30,30" VerticalOptions="Center" BackgroundColor="#333333">
+        <Frame HeightRequest="200" WidthRequest="195" CornerRadius="50">
+            <Image Source="https://cdn-icons-png.freepik.com/256/14024/14024728.png?semt=ais_hybrid" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center"/>
+        </Frame>
+        <Frame BackgroundColor="Gray" CornerRadius="25" Padding="10" BorderColor="Transparent" HasShadow="True">
+            <Entry Placeholder="Nombre de Usuario" FontSize="18" BackgroundColor="Transparent" TextColor="White" HeightRequest="50" HorizontalTextAlignment="Center"/>
+        </Frame>
 
-        <Entry Placeholder="Correo Electrónico" Keyboard="Email" />
-        <Entry Placeholder="Contraseña" IsPassword="True" />
+        <Frame BackgroundColor="Gray" CornerRadius="25" Padding="10" BorderColor="Transparent" HasShadow="True">
+            <Entry Placeholder="Contraseña" FontSize="18" BackgroundColor="Transparent" TextColor="White" HeightRequest="50" IsPassword="True" HorizontalTextAlignment="Center"/>
+        </Frame>
 
-        <Button Text="Iniciar Sesión" BackgroundColor="Blue" TextColor="White" />
+        <Label Text="Lorem ipsum" TextColor="White" HorizontalOptions="Center" Padding="0,10,0,10"/>
 
-        <Button Text="Registrarse" BackgroundColor="Transparent" TextColor="Blue" Clicked="OnRegisterClicked" />
+        <Button Text="Iniciar Sesión" BackgroundColor="White" TextColor="Black" FontSize="18" HeightRequest="50"  CornerRadius="25" Clicked="OnRegisterClicked"/>
+
+        <Label Text="Lorem ipsum" TextColor="White" HorizontalOptions="Center" Padding="0,10,0,10"/>
     </VerticalStackLayout>
 </ContentPage>
